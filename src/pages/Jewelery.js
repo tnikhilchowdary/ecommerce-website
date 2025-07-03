@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
 import "./Jew.css";
 
-const Jewelery = ({ search }) => {
+const Jewelery = ({ search, addToCart }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -18,7 +18,7 @@ const Jewelery = ({ search }) => {
   return (
     <div className="product-grid">
       {filtered.map((product) => (
-        <ProductCard key={product.id} product={product} />
+        <ProductCard key={product.id} product={product} addToCart={addToCart} />
       ))}
     </div>
   );

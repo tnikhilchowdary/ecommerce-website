@@ -30,14 +30,12 @@ nav a {
   font-size: 1.1rem;
 }
 
-/* Right section: search + cart */
 .navbar-right {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-/* Bigger and cleaner input */
 .navbar input[type="text"] {
   padding: 10px 16px;
   font-size: 1rem;
@@ -46,7 +44,6 @@ nav a {
   width: 260px;
 }
 
-/* Optional: cart icon styling */
 .navbar .cart-icon {
   font-size: 24px;
   color: purple;

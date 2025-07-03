@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ProductCard from "../components/ProductCard";
 import "./Women.css";
 
-const Women = ({ search }) => {
+const Women = ({ search, addToCart }) => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -11,7 +11,6 @@ const Women = ({ search }) => {
       .then((data) => setProducts(data));
   }, []);
 
-  // Filter products based on search input
   const filtered = products.filter((item) =>
     item.title.toLowerCase().includes(search.toLowerCase())
   );
@@ -19,7 +18,7 @@ const Women = ({ search }) => {
   return (
     <div className="product-grid">
       {filtered.map((product) => (
-        <ProductCard key={product.id} product={product} />
+        <ProductCard key={product.id} product={product} addToCart={addToCart} />
       ))}
     </div>
   );
